@@ -1,0 +1,363 @@
+/* Bendras akcentas, naudojamas visur */
+:root {
+  --accent-color: #00b894;
+}
+
+
+/* 2a. Nauja šriftų šeima visam puslapiui */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+/* 2b. Antraštės – kiti šriftai / dydžiai / spalvos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6em;
+}
+
+h1 {
+  font-size: 2.6rem;
+  color: var(--accent-color);
+}
+
+h2 {
+  font-size: 2.1rem;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: #ffeaa7;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #dfe6e9;
+}
+
+h5 {
+  font-size: 1.3rem;
+  color: #b2bec3;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-size: 1.1rem;
+  color: #636e72;
+  font-weight: 600;
+}
+
+/* 2c. Pataisytas paragrafų stilius – kad skirtųsi nuo šablono */
+p {
+  font-size: 1rem;
+  line-height: 1.8;
+  letter-spacing: 0.015em;
+  color: #dcdde1;
+  margin-bottom: 1.1rem;
+}
+
+
+/* Bendras stilius mygtukams */
+.btn-getstarted,
+.btn-primary,
+.btn-secondary,
+button,
+a.btn {
+  font-weight: 600;
+  padding: 0.65rem 1.6rem;
+  border-radius: 999px;
+  border: 2px solid var(--accent-color);
+  background: transparent;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* :hover būsena */
+.btn-getstarted:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+button:hover,
+a.btn:hover {
+  background: var(--accent-color);
+  color: #0b0c10;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 184, 148, 0.4);
+}
+
+/* :active būsena */
+.btn-getstarted:active,
+.btn-primary:active,
+.btn-secondary:active,
+button:active,
+a.btn:active {
+  transform: translateY(0);
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.35);
+  background: #009170;
+  color: #ffffff;
+}
+
+/* Nuorodos */
+a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+a:hover {
+  color: #55efc4;
+  text-decoration-color: #55efc4;
+}
+
+a:active {
+  color: #00cec9;
+}
+
+
+/* Vienodas vertikalus tarpas šioms sekcijoms */
+.about.section,
+.resume.section,
+.portfolio.section,
+.services.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Vienodas tarpas po sekcijos antrašte */
+.about .section-title,
+.resume .section-title,
+.portfolio .section-title,
+.services .section-title {
+  padding-bottom: 40px;
+}
+
+/* Kortelės – rėmeliai, radius, šešėliai */
+.profile-card,
+.services .service-item,
+.experience-cards .exp-card,
+.portfolio .portfolio-card {
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+}
+
+/* Daugiau vidaus tarpo kortelėse */
+.services .service-item,
+.experience-cards .exp-card,
+.portfolio .portfolio-card {
+  padding: 1.8rem;
+}
+
+/* Vienodas tarpas tarp kolonų blokų */
+.about .row.gy-5 > [class*="col-"],
+.resume .row.gy-5 > [class*="col-"],
+.portfolio .row.gy-4 > [class*="col-"],
+.services .row.gy-4 > [class*="col-"] {
+  margin-bottom: 1.5rem;
+}
+
+
+/* Progreso juostos – nauja išvaizda */
+.progress {
+  height: 14px;
+  border-radius: 999px;
+  background: #1a1d23;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.progress .progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00b894, #55efc4);
+  box-shadow: 0 0 12px rgba(0, 184, 148, 0.7);
+}
+
+/* Procentų tekstas šalia juostos */
+.skill-item .skill-header .percent {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* "Į viršų" mygtukas */
+.scroll-top {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  transition: background 0.2s ease, border-color 0.2s ease,
+              transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.scroll-top i {
+  font-size: 1.9rem;
+  color: var(--accent-color);
+}
+
+.scroll-top:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(0, 184, 148, 0.7);
+}
+
+.scroll-top:hover i {
+  color: #0b0c10;
+}
+
+.scroll-top:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Bendri nustatymai (nekabinam prie meniu ul) */
+.custom-bullet-list,
+.custom-number-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Nenumeruotas sąrašas su pseudo-elementais */
+.custom-bullet-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.custom-bullet-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0.2rem;
+  top: 0.55rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 0.2rem;
+  background: radial-gradient(circle at 30% 30%, #ffffff, var(--accent-color));
+  box-shadow: 0 0 8px rgba(0, 184, 148, 0.7);
+}
+
+/* Nested UL viduje – kitas stilius */
+.custom-bullet-list ul {
+  list-style: none;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  padding-left: 1.4rem;
+}
+
+.custom-bullet-list ul li {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.custom-bullet-list ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0.4rem;
+  color: #ffeaa7;
+}
+
+/* Numeruotas sąrašas su CSS counteriais */
+.custom-number-list {
+  counter-reset: custom-counter;
+}
+
+.custom-number-list li {
+  counter-increment: custom-counter;
+  position: relative;
+  padding-left: 2.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.custom-number-list li::before {
+  content: counter(custom-counter) ".";
+  position: absolute;
+  left: 0.1rem;
+  top: 0.2rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 999px;
+  border: 2px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Šiek tiek mažesnis tekstas sąrašuose */
+.custom-bullet-list li,
+.custom-number-list li {
+  font-size: 0.98rem;
+}
+
+
+.services-table-wrapper {
+  margin-top: 2.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+}
+
+.services-pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #0f1116;
+}
+
+.services-pricing-table th,
+.services-pricing-table td {
+  padding: 0.9rem 1.2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  font-size: 0.96rem;
+}
+
+/* Header row */
+.services-pricing-table thead th {
+  background: linear-gradient(90deg, #00b894, #00cec9);
+  color: #0b0c10;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Zebra stilius */
+.services-pricing-table tbody tr:nth-child(odd) {
+  background: #151821;
+}
+
+.services-pricing-table tbody tr:nth-child(even) {
+  background: #101218;
+}
+
+/* Hover efektas */
+.services-pricing-table tbody tr:hover {
+  background: #222831;
+}
+
+/* Mažiems ekranams */
+@media (max-width: 767.98px) {
+  .services-pricing-table th,
+  .services-pricing-table td {
+    padding: 0.7rem 0.6rem;
+    font-size: 0.9rem;
+  }
+}
